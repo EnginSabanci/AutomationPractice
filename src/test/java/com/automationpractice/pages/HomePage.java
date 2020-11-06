@@ -7,11 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import utils.Driver;
 
-public class BasePage {
+public class HomePage {
 
     @FindBy(xpath = "//div[@id='header_logo']/a/img")
     public WebElement logo;
-    public  BasePage(){
+    public HomePage(){
         PageFactory.initElements(Driver.get(), this);
     }
     //First We need to test the logo with id
