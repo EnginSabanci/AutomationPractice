@@ -9,8 +9,6 @@ import org.testng.annotations.Test;
 import utils.BrowserUtils;
 import utils.Driver;
 
-import java.sql.SQLOutput;
-
 
 public class Login extends TestBase {
 
@@ -60,6 +58,7 @@ public class Login extends TestBase {
     * If the element is there but not visible, we would get the message.
     * */
  //   @Test(description = "Verify that Logo is displayed")
+  @Test
     public void TestLogo(){
         WebElement logo = Driver.get().findElement(By.cssSelector(".logo.img-responsive"));
         Assert.assertTrue(logo.isDisplayed(), "Logo is not displayed");
