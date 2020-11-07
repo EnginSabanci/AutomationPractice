@@ -9,7 +9,7 @@ public class HomePageTest extends TestBase {
     @Test
     public void test1(){
         HomePage homePage = new HomePage();
-        //create a page object
+        //create a page object.
         //use testLogo() method in HomePage class.
         homePage.testLogo();
 }
