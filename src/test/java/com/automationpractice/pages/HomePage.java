@@ -11,6 +11,10 @@ public class HomePage {
 
     @FindBy(xpath = "//div[@id='header_logo']/a/img")
     public WebElement logo;
+
+    @FindBy(id="search_query_top")
+    public WebElement searchBox;
+
     public HomePage(){
         PageFactory.initElements(Driver.get(), this);
     }
@@ -18,5 +22,9 @@ public class HomePage {
     public void testLogo(){
         logo.isDisplayed();
         System.out.println("Logo is displayed");
+    }
+
+    public void testSearchBox() {
+        searchBox.isDisplayed();
     }
 }

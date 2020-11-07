@@ -12,5 +12,7 @@ public class HomePageTest extends TestBase {
         //create a page object.
         //use testLogo() method in HomePage class.
         homePage.testLogo();
+        homePage.testSearchBox();
+
 }
 }
