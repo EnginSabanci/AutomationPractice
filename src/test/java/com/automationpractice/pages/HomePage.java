@@ -15,6 +15,9 @@ public class HomePage {
     @FindBy(id="search_query_top")
     public WebElement searchBox;
 
+    @FindBy(className = "shopping_cart")
+    public WebElement cart;
+
     public HomePage(){
         PageFactory.initElements(Driver.get(), this);
     }
@@ -26,5 +29,9 @@ public class HomePage {
 
     public void testSearchBox() {
         searchBox.isDisplayed();
+    }
+
+    public void cart(){
+        cart.isDisplayed();
     }
 }

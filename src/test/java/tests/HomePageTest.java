@@ -13,6 +13,7 @@ public class HomePageTest extends TestBase {
         //use testLogo() method in HomePage class.
         homePage.testLogo();
         homePage.testSearchBox();
+        homePage.cart();
 
 }
 }
