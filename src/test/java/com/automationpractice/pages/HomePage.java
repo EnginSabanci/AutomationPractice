@@ -1,10 +1,10 @@
 package com.automationpractice.pages;
-import org.openqa.selenium.*;
+//import org.openqa.selenium.*;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 import utils.Driver;
 
 public class HomePage {
