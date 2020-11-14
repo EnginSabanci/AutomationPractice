@@ -18,6 +18,9 @@ public class HomePage {
     @FindBy(className = "shopping_cart")
     public WebElement cart;
 
+    @FindBy(className = "login")
+    public WebElement login;
+
     public HomePage(){
         PageFactory.initElements(Driver.get(), this);
     }
@@ -33,5 +36,9 @@ public class HomePage {
 
     public void cart(){
         cart.isDisplayed();
+    }
+
+    public void login(){
+        login.isDisplayed();
     }
 }
