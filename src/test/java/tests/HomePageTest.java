@@ -15,6 +15,6 @@ public class HomePageTest extends TestBase {
         homePage.testSearchBox();
         homePage.cart();
         homePage.login();
-
+     }
 }
-}
+ 
