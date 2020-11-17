@@ -33,5 +33,12 @@ public class WomenPageTest extends TestBase {
         womenPage.testStylesDressy();
         womenPage.testCatalogText();
 
+        womenPage.testInfoHeading();
+        womenPage.testDelivery();
+        womenPage.testLegalNotice();
+        womenPage.testTerms();
+        womenPage.testAboutUs();
+        womenPage.testSecurePayment();
+
     }
 }

@@ -61,6 +61,23 @@ public class WomenPage {
     @FindBy(linkText = "http://automationpractice.com/index.php?id_category=3&controller=category#styles-casual")
     WebElement stylesDressy;
 
+    @FindBy(xpath = "//*[@id=\"informations_block_left_1\"]/p/a")
+        WebElement infoHeading;
+    @FindBy(xpath = "//*[@id=\"informations_block_left_1\"]/div/ul/li[1]/a")
+        WebElement delivery;
+    @FindBy(xpath =" //a[@title='Legal Notice']")
+        WebElement legalNotice;
+    @FindBy(css = "#informations_block_left_1 > div > ul > li:nth-child(3) > a")
+        WebElement terms;
+    @FindBy(xpath = "//*[@id=\"informations_block_left_1\"]/div/ul/li[4]/a")
+        WebElement aboutUs;
+    @FindBy(xpath = "//*[@id=\"informations_block_left_1\"]/div/ul/li[5]/a")
+        WebElement securePayment;
+
+
+
+
+
 
 
 
@@ -75,10 +92,7 @@ public class WomenPage {
     public void testDresses(){
         dresses.isDisplayed();
     }
-    public void testCatalog(){
-        catalog.isDisplayed();
-
-    }
+    public void testCatalog(){ catalog.isDisplayed(); }
     public void testCatalogText(){
         System.out.println(catalog.getText());
     }
@@ -137,6 +151,31 @@ public class WomenPage {
     public void testStylesDressy(){
         stylesDressy.isDisplayed();
     }
+
+
+
+    public void testInfoHeading() {
+        infoHeading.isDisplayed();
+    }
+    public void testDelivery() {
+        delivery.isDisplayed();
+    }
+    public void testLegalNotice() {
+        legalNotice.isDisplayed();
+    }
+    public void testTerms(){
+        terms.isDisplayed();
+    }
+    public void testAboutUs(){
+        aboutUs.isDisplayed();
+    }
+    public void testSecurePayment(){
+        securePayment.isDisplayed();
+    }
+
+
+
+
 
 
 
