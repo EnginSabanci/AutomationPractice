@@ -61,13 +61,26 @@ public abstract class TestBase {
 
    
 
-    @AfterTest
-    public void teardown() {
-        if(result.getStatus() == ITestResult.FAILURE){
-            extentTest.fail(result.getName());
-            extentTest.fail(result.get)
-        }
+    @AfterMethod
+    public void teardown(ITestResult result) {
 
+        if (result.getStatus() == ITestResult.FAILURE) {
+            extentTest.fail(result.getName());
+            extentTest.fail(result.getThrowable());
+
+            try {
+                extentTest.addScreenCaptureFromPath(BrowserUtils.getScreenShot(result.getName()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            if(result.getStatus()==ITestResult.SKIP)
+
+            {
+                extentTest.skip("Test case was skipped: " + result.getName());
+            }
+        }
+        Driver.close();
     }
+}
 
 }
