@@ -9,7 +9,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+
 import utils.BrowserUtils;
+
 import utils.ConfigurationReader;
 import utils.Driver;
 
@@ -35,7 +37,13 @@ public abstract class TestBase {
         extentReports.setSystemInfo("OS",System.getProperty("os.name"));
     }
 
+    protected ExtentReports extentReports;
+    //ExtentHtmlreporter creates a rich standalone HTML file
+    protected ExtentHtmlReporter extentHtmlReporter;
+    //Define a test. You add logs, snapshots, assign author and categories to the test. Report is regression, smoke or functional test and module of the test.
+    protected ExtentTest extentTest;
 
+    
     @BeforeTest
     public void setup(){
         //read url value from the properties file.
@@ -51,20 +59,15 @@ public abstract class TestBase {
         Driver.close();
     }
 
+   
+
     @AfterTest
-    public void teardown(ITestResult result){
-        if(result.getStatus()==ITestResult.FAILURE){
+    public void teardown() {
+        if(result.getStatus() == ITestResult.FAILURE){
             extentTest.fail(result.getName());
-            extentTest.fail(result.getThrowable());
+            extentTest.fail(result.get)
+        }
 
-            try {
-                extentTest.addScreenCaptureFromPath(BrowserUtils.getScreenShot(result.getName()));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        }else if(result.getStatus()==ITestResult.SKIP);
-        extentTest.skip("Test case was skipped "+result.getName());
     }
 
 }

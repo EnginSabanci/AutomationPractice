@@ -33,5 +33,28 @@ public class WomenPageTest extends TestBase {
         womenPage.testStylesDressy();
         womenPage.testCatalogText();
 
+        womenPage.testInfoHeading();
+        womenPage.testDelivery();
+        womenPage.testLegalNotice();
+        womenPage.testTerms();
+        womenPage.testAboutUs();
+        womenPage.testSecurePayment();
+        womenPage.testOurStores();
+        womenPage.testManufacturers();
+        womenPage.testFashionManufacturers();
+        womenPage.testSelectManufacturer();
+        womenPage.testSpecials();
+        womenPage.testPrintedChiffonDress();
+        womenPage.testProductDescription();
+        womenPage.testGetPrintedChiffonDress();
+        womenPage.testAllSpecials();
+        womenPage.testGetOurStores();
+        womenPage.testGetOurStoresImage();
+        womenPage.testDiscoverOurstores();
+        womenPage.testSuppliers();
+        womenPage.testFashionSuppliers();
+        womenPage.testSelectSupplier();
+        womenPage.testViewedProducts();
+
     }
 }

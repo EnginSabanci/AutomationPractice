@@ -61,6 +61,57 @@ public class WomenPage {
     @FindBy(linkText = "http://automationpractice.com/index.php?id_category=3&controller=category#styles-casual")
     WebElement stylesDressy;
 
+    @FindBy(xpath = "//*[@id=\"informations_block_left_1\"]/p/a")
+        WebElement infoHeading;
+    @FindBy(xpath = "//*[@id=\"informations_block_left_1\"]/div/ul/li[1]/a")
+        WebElement delivery;
+    @FindBy(xpath =" //a[@title='Legal Notice']")
+        WebElement legalNotice;
+    @FindBy(css = "#informations_block_left_1 > div > ul > li:nth-child(3) > a")
+        WebElement terms;
+    @FindBy(xpath = "//*[@id=\"informations_block_left_1\"]/div/ul/li[4]/a")
+        WebElement aboutUs;
+    @FindBy(xpath = "//*[@id=\"informations_block_left_1\"]/div/ul/li[5]/a")
+        WebElement securePayment;
+    @FindBy(xpath = "//*[@id=\"informations_block_left_1\"]/div/ul/li[6]/a")
+        WebElement ourStores;
+    @FindBy(xpath = "//div[@id=\"manufacturers_block_left\"]/p/a")
+        WebElement manufacturers;
+    @FindBy(xpath = "//div[@id=\"manufacturers_block_left\"]/div/ul/li/a")
+        WebElement fashionManufacturers;
+    @FindBy(xpath = "//*[@id=\"manufacturers_block_left\"]/div/form/div/div/select")
+        WebElement selectManufacturer;
+    @FindBy(css = "#special_block_right > p > a")
+        WebElement specials;
+
+    @FindBy(css = "#special_block_right > div > ul > li > div > h5 > a")
+        WebElement printedChiffonDress;
+    @FindBy(xpath = "//*[@id=\"special_block_right\"]/div/ul/li/div/p")
+        WebElement productDescription;
+    @FindBy(css = "#special_block_right > div > ul > li > a > img")
+        WebElement getPrintedChiffonDress;
+    @FindBy(xpath = "//*[@id=\"special_block_right\"]/div/div/a/span")
+        WebElement allSpecials;
+    @FindBy(css = "#stores_block_left > p > a")
+        WebElement getOurStores;
+    @FindBy(css = "#stores_block_left > div > p > a > img")
+        WebElement getOurStoresImage;
+    @FindBy(xpath = "//*[@id=\"stores_block_left\"]/div/div/a/span")
+        WebElement discoverOurStores;
+    @FindBy(css = "#suppliers_block_left > p > a")
+        WebElement suppliers;
+    @FindBy(xpath = "//*[@id=\"suppliers_block_left\"]/div/ul/li/a")
+        WebElement fashionSuppliers;
+    @FindBy(css = "#suppliers_block_left > div > form > div > div > select")
+        WebElement selectSupplier;
+    @FindBy(xpath = "//*[@id=\"viewed-products_block_left\"]/p")
+        WebElement viewedProducts;
+
+
+
+
+
+
 
 
 
@@ -75,10 +126,7 @@ public class WomenPage {
     public void testDresses(){
         dresses.isDisplayed();
     }
-    public void testCatalog(){
-        catalog.isDisplayed();
-
-    }
+    public void testCatalog(){ catalog.isDisplayed(); }
     public void testCatalogText(){
         System.out.println(catalog.getText());
     }
@@ -137,6 +185,81 @@ public class WomenPage {
     public void testStylesDressy(){
         stylesDressy.isDisplayed();
     }
+
+
+
+    public void testInfoHeading() {
+        infoHeading.isDisplayed();
+    }
+    public void testDelivery() {
+        delivery.isDisplayed();
+    }
+    public void testLegalNotice() {
+        legalNotice.isDisplayed();
+    }
+    public void testTerms(){
+        terms.isDisplayed();
+    }
+    public void testAboutUs(){
+        aboutUs.isDisplayed();
+    }
+    public void testSecurePayment(){
+        securePayment.isDisplayed();
+    }
+    public void testOurStores(){
+        ourStores.isDisplayed();
+    }
+    public void testManufacturers(){
+        manufacturers.isDisplayed();
+    }
+    public void testFashionManufacturers(){
+        fashionManufacturers.isDisplayed();
+    }
+    public void testSelectManufacturer(){
+        selectManufacturer.isDisplayed();
+    }
+    public void testSpecials(){
+        specials.isDisplayed();
+    }
+    public void testPrintedChiffonDress(){
+        printedChiffonDress.isDisplayed();
+    }
+    public void testProductDescription(){
+        productDescription.isDisplayed();
+    }
+    public void testGetPrintedChiffonDress(){
+        getPrintedChiffonDress.isDisplayed();
+        // printed chiffon dress is displayed
+    }
+    public void testAllSpecials(){
+        allSpecials.isDisplayed();
+    }
+    public void testGetOurStores(){
+        getOurStores.isDisplayed();
+    }
+    public void testGetOurStoresImage(){
+        getOurStoresImage.isDisplayed();
+    }
+    public void testDiscoverOurstores(){
+        discoverOurStores.isDisplayed();
+    }
+    public void testSuppliers(){
+        suppliers.isDisplayed();
+    }
+    public void testFashionSuppliers(){
+        fashionSuppliers.isDisplayed();
+    }
+    public void testSelectSupplier(){
+        selectSupplier.isDisplayed();
+    }
+    public void testViewedProducts(){
+        viewedProducts.isDisplayed();
+    }
+
+
+
+
+
 
 
 

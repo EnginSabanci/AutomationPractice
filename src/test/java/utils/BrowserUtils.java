@@ -23,20 +23,23 @@ public class BrowserUtils {
 
     }
 
-    public static String getScreenShot(String name) throws IOException {
-        SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd-HH:mm");
-        String date=df.format(new Date());
 
-        TakesScreenshot ts=(TakesScreenshot) Driver.get();
-        File source=ts.getScreenshotAs(OutputType.FILE);
-        String target=System.getProperty("user.dir")+"/test-output/Screenshots"+name+date+".png";
-        File finalDestination=new File(target);
-        //save the sceenshoot to the path i created
-        FileUtils.copyFile(source,finalDestination);
+    public static String getScreenShot (String name) {
+        SimpleDateFormat df = new SimpleDateFormat("-yyyy-MM-dd HH:mm"); //yyyy-MM-dd HH:mm
+        String date = df.format(new Date());
 
+        TakesScreenshot ts = (TakesScreenshot) Driver.get();
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        String target = System.getProperty("user.dir") + "/test-output/Screenshots/" + name + date + ".png";
+        File finalDestination = new File(target);
+        //save the screenshot to the path I created
+
+        try {
+            FileUtils.copyFile(source, finalDestination);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return target;
-
     }
-
 
 }
