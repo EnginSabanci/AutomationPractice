@@ -229,6 +229,7 @@ public class WomenPage {
     }
     public void testGetPrintedChiffonDress(){
         getPrintedChiffonDress.isDisplayed();
+        // printed chiffon dress is displayed
     }
     public void testAllSpecials(){
         allSpecials.isDisplayed();
