@@ -20,6 +20,10 @@ public class HomePage {
 
     @FindBy(className = "login")
     public WebElement login;
+    @FindBy(xpath = "//*[@id=\"block_top_menu\"]/ul/li[3]/a")
+    public WebElement Tshirtbutton;
+
+
 
     public HomePage(){
         PageFactory.initElements(Driver.get(), this);
@@ -41,4 +45,11 @@ public class HomePage {
     public void login(){
         login.isDisplayed();
     }
+
+    public void clickTshirt(){
+        Tshirtbutton.click();
+    }
+
+
+
 }
