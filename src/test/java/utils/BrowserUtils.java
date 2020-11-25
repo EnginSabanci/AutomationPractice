@@ -14,10 +14,15 @@ public class BrowserUtils {
     public static void wait(int seconds) {
         try {
             Thread.sleep(1000*seconds);
-        } catch (InterruptedException e) {
+        }
+        catch (InterruptedException e)
+        {
         e.printStackTrace();
+        }
+
+
     }
-}
+
 
     public static String getScreenShot (String name) {
         SimpleDateFormat df = new SimpleDateFormat("-yyyy-MM-dd HH:mm"); //yyyy-MM-dd HH:mm
@@ -36,4 +41,5 @@ public class BrowserUtils {
         }
         return target;
     }
+
 }
