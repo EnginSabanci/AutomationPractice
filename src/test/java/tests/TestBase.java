@@ -54,10 +54,10 @@ public abstract class TestBase {
         Driver.get().get(url);
     }
 
-    @AfterTest
-    public void teardown(){
-        Driver.close();
-    }
+//     @AfterTest
+//     public void teardown(){
+//         Driver.close();
+//     }
 
    
 
