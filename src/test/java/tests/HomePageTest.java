@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 
 public class HomePageTest extends TestBase {
 
+
+
     @Test(groups={"cls1","other"})
     public void test1() throws InterruptedException {
         extentTest=extentReports.createTest("verifying test logo  and cart");

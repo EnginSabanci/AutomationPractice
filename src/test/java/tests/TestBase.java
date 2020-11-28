@@ -1,9 +1,9 @@
 package tests;
 
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -18,10 +18,10 @@ import utils.Driver;
 import java.io.IOException;
 
 public abstract class TestBase {
-    protected ExtentReports extentReports;
-    protected ExtentHtmlReporter extentHtmlReporter;
+    protected static ExtentReports extentReports;
+    protected static ExtentHtmlReporter extentHtmlReporter;
     //Define a test you add logs snapshots assign autor  and categories to test report is regression smoke or functional test and module of test
-    protected ExtentTest extentTest;
+    protected static ExtentTest extentTest;
 
     @BeforeTest
     public void beforeTest(){
@@ -37,11 +37,7 @@ public abstract class TestBase {
         extentReports.setSystemInfo("OS",System.getProperty("os.name"));
     }
 
-    protected ExtentReports extentReports;
-    //ExtentHtmlreporter creates a rich standalone HTML file
-    protected ExtentHtmlReporter extentHtmlReporter;
-    //Define a test. You add logs, snapshots, assign author and categories to the test. Report is regression, smoke or functional test and module of the test.
-    protected ExtentTest extentTest;
+
 
     
     @BeforeTest
@@ -54,7 +50,23 @@ public abstract class TestBase {
         Driver.get().get(url);
     }
 
-      }
+    @AfterMethod
+    public void teardown(ITestResult result) {
+        //last comment
+        if (result.getStatus() == ITestResult.FAILURE) {
+            extentTest.fail(result.getName());
+            extentTest.fail(result.getThrowable());
+            try {
+                extentTest.addScreenCaptureFromPath(BrowserUtils.getScreenShot(result.getName()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            if(result.getStatus()==ITestResult.SKIP)
+            {
+                extentTest.skip("Test case was skipped: " + result.getName());
+            }
+        }
+
         Driver.close();
     }
 }

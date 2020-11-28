@@ -10,20 +10,21 @@ public class TshirtPage extends HomePage {
     @FindBy(xpath = "//span[@class='cat-name']")
     public WebElement Tshirtlabel;
 
-    @FindBy(xpath = "//a[@class='button ajax_add_to_cart_button btn btn-default']")
+    @FindBy(xpath = "//a[@title='Add to cart']")
     public WebElement sleeveTshirt;
 
     public void tshirtlabelcontrol() throws InterruptedException {
         if (Tshirtlabel.isDisplayed()){
-            Thread.sleep(5000);
+
             System.out.println("tshirt goruldu");
         }
 
     }
     public void clickAddChart() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(2000);
+
         sleeveTshirt.click();
-        Thread.sleep(3000);
+
     }
 }
 
