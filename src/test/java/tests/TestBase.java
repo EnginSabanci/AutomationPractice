@@ -49,6 +49,7 @@ public abstract class TestBase {
         //Driver.get() method return WebDriver object and then the second get() method is WebDriver method
         Driver.get().get(url);
     }
+
     @AfterMethod
     public void teardown(ITestResult result) {
         //last comment
@@ -65,9 +66,8 @@ public abstract class TestBase {
                 extentTest.skip("Test case was skipped: " + result.getName());
             }
         }
+
         Driver.close();
     }
 }
-
-
 
