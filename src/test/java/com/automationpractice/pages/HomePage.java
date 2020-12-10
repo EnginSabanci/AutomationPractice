@@ -23,6 +23,8 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"block_top_menu\"]/ul/li[3]/a")
     public WebElement Tshirtbutton;
 
+    @FindBy(id = "contact-link")
+    public WebElement contactUs;
 
 
     public HomePage(){
@@ -46,8 +48,10 @@ public class HomePage {
         login.isDisplayed();
     }
 
-    public void clickTshirt(){
-        Tshirtbutton.click();
+    public void clickTshirt(){ Tshirtbutton.click();
+    }
+
+    public void clickContactUs(){ contactUs.click();
     }
 
 
