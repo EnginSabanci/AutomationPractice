@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="AutomationPractice" />
         <module name="CoodingBook" />
         <module name="MyFirstSeleniumProject" />
-        <module name="AutomationPractice" />
       </profile>
     </annotationProcessing>
   </component>

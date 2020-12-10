@@ -1,6 +1,7 @@
 package tests;
 
 
+import com.automationpractice.pages.ContactPage;
 import com.automationpractice.pages.HomePage;
 import com.automationpractice.pages.TshirtPage;
 import org.testng.annotations.Test;
@@ -31,5 +32,6 @@ public class HomePageTest extends TestBase {
         tshirtPage.clickAddChart();
 
     }
+
 }
  
